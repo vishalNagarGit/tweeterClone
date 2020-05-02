@@ -25,9 +25,13 @@ public class  MainActivity extends AppCompatActivity {
 
    EditText username;
   EditText passwd;
-
-  public void loginMethod(View view)
+  public void test()
   {
+     return;
+  }
+   
+  public void loginMethod(View view)
+  {  
     if(username.getText()==null||passwd.getText().toString()==null)
       Toast.makeText(this, "invalid username or passwd", Toast.LENGTH_SHORT).show();
     else
