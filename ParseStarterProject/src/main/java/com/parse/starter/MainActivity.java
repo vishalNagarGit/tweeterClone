@@ -47,7 +47,8 @@ public class  MainActivity extends AppCompatActivity {
   }
 
   public void signupMethod(View view)
-  { if(username.getText()==null||passwd.getText().toString()==null)
+  {  //kdjfkjfsjefiseijfsnfisef
+      if(username.getText()==null||passwd.getText().toString()==null)
     Toast.makeText(this, "invalid username or passwd", Toast.LENGTH_SHORT).show();
 
    else
