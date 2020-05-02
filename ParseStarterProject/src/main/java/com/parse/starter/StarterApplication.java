@@ -9,14 +9,9 @@
 package com.parse.starter;
 
 import android.app.Application;
-import android.util.Log;
 
 import com.parse.Parse;
 import com.parse.ParseACL;
-import com.parse.ParseException;
-import com.parse.ParseObject;
-import com.parse.ParseUser;
-import com.parse.SaveCallback;
 
 
 public class StarterApplication extends Application {
@@ -31,8 +26,8 @@ public class StarterApplication extends Application {
     // Add your initialization code here
     Parse.initialize(new Parse.Configuration.Builder(getApplicationContext())
             .applicationId("myappID")
-            .clientKey("Z5zWzLKUMtZN")
-            .server("http://13.233.157.104/parse/")
+            .clientKey("YdVcTWllUqP4")
+            .server("http://52.66.8.70/parse/")
             .build()
     );
 
