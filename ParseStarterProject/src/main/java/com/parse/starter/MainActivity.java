@@ -7,6 +7,7 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 package com.parse.starter;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -26,7 +27,15 @@ public class  MainActivity extends AppCompatActivity {
    EditText username;
   EditText passwd;
 
-   
+  public void redirect()
+  {
+      if(ParseUser.getCurrentUser()!=null)
+      {
+          Intent intent=new Intent(getApplicationContext(),usersList.class);
+          startActivity(intent);
+      }
+  }
+
   public void loginMethod(View view)
   {  
     if(username.getText()==null||passwd.getText().toString()==null)
@@ -38,6 +47,7 @@ public class  MainActivity extends AppCompatActivity {
          if(e==null)
          {
            Log.i("login","success");
+             redirect();
          }
         else{
            Toast.makeText(MainActivity.this, "could not log in", Toast.LENGTH_SHORT).show();
@@ -78,6 +88,7 @@ public class  MainActivity extends AppCompatActivity {
     username=(EditText)findViewById(R.id.userNameEditText);
     passwd=(EditText)findViewById(R.id.passwdEditText);
     ParseAnalytics.trackAppOpenedInBackground(getIntent());
+      redirect();
   }
 
 }
