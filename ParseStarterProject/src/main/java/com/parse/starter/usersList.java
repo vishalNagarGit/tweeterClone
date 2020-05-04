@@ -86,6 +86,11 @@ public class usersList extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(),MainActivity.class));
         }
 
+        else if(item.getItemId()==R.id.feed)
+        {
+            startActivity(new Intent(getApplicationContext(),feeds.class));
+        }
+
         return super.onOptionsItemSelected(item);
     }
 

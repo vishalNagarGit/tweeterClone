@@ -29,7 +29,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".usersList"></activity>
+        <activity android:name=".usersList" />
+        <activity android:name=".feeds"></activity>
     </application>
 
 </manifest>
